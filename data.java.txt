@@ -1,0 +1,53 @@
+package com.data;
+
+
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import models.DriverDetails;
+
+public class SetData {
+
+	public void data(String driver_name, String contact_number, String experience, String currently_driving,
+			String bank_name, String account_number, String ifsc_code, String address, String vehicle_number,
+			String vehicle_make, String license_number, String insurance, String preferred_area, String email,
+			String city, String enrolled_date) {
+		DriverDetails dd=null;
+		try{
+		dd=new DriverDetails();
+		dd.setAccount_number(account_number);
+		dd.setAddress(address);
+		dd.setBank_name(bank_name);
+		dd.setCity(city);
+		dd.setContact_number(contact_number);
+		dd.setCurrently_driving(currently_driving);
+		dd.setDriver_name(driver_name);
+		dd.setEmail(email);
+		dd.setEnrolled_date(enrolled_date);
+		dd.setExperience(experience);
+		dd.setIfsc_code(ifsc_code);
+		dd.setInsurance(insurance);
+		dd.setPreferred_area(preferred_area);
+		dd.setVehicle_make(vehicle_make);
+		dd.setVehicle_number(vehicle_number);}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		Configuration cfg=new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf=cfg.buildSessionFactory();
+		Session s=sf.openSession();
+		Transaction t=s.beginTransaction();
+		s.persist(dd);
+		t.commit();
+		s.close();
+		
+		
+		
+	}
+
+}

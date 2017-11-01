@@ -1,0 +1,49 @@
+package com.data;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/register")
+public class DriverServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+   
+  
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String driver_name=request.getParameter("driver_name");
+		String contact_number=request.getParameter("contact_number");
+		String experience=request.getParameter("experience");
+		String currently_driving=request.getParameter("currently_driving");
+		String bank_name=request.getParameter("bank_name");
+		String account_number=request.getParameter("account_number");
+		String ifsc_code=request.getParameter("ifsc_code");
+		String address=request.getParameter("address");
+		String vehicle_number=request.getParameter("vehicle_number");
+		String vehicle_make=request.getParameter("vehicle_make");
+		String license_number=request.getParameter("license_number");
+		String insurance=request.getParameter("insurance");
+		String preferred_area=request.getParameter("preferred_area");
+		String email=request.getParameter("email");
+		String city=request.getParameter("city");
+		String enrolled_date=request.getParameter("enrolled_date");
+		
+		SetData sd=new SetData();
+		sd.data(driver_name,contact_number,experience,currently_driving,bank_name,account_number,ifsc_code,address,vehicle_number
+				,vehicle_make,license_number,insurance,preferred_area,email,city,enrolled_date);
+		
+	}
+
+}

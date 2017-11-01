@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>DriverRegistrationForm</title>
+</head>
+<style>
+div{
+  font-size: 105%;
+  text-align: center;
+}
+</style>
+
+<body>
+     <div>  
+     <center> 
+     <form action="DriverServlet" method="post" style="border:2px solid red;width:400px;padding:20px 10px 30px 30px;margin-top:150px;border-radius:20px;">
+           <h1>REGISTRATION FORM</h1>
+         <table>
+	     <tbody>
+	     <tr>
+	     <td>Driver Name:<font color="red">*</font></td>
+	     <td> <input type="text" name="driver_nanme" class="field" placeholder="name">
+	     </td>
+	     </tr>
+         <tr>
+         <td>Contact Number:<font color="red">*</font></td>
+         <td><input type="text" name="contact_number" placeholder="phone number" class="field">
+         </td>
+         </tr>
+          <tr>
+          <td> Experience:<font color="red">*</font></td><td> <input type="date" name="experience" class="field">
+          </td>
+          </tr>
+	      <tr>
+	      <td>Currently Driving:</td>
+	      <td><input type="text" name="currently_driving"  class="field"></td></tr>
+	      <tr><td>Bank Name:<font color="red">*</font></td><td><input type="text" name="bank_name" placeholder="bank name"></td></tr>
+	      <tr><td>Account Number:<font color="red">*</font></td><td><input type="number" name="account_number" placeholder="account number"></td></tr>
+	      <tr><td>IfSC code:<font color="red">*</font></td><td><input type="text" name="ifsc_code" placeholder="ifsc code"></td></tr>
+	      <tr><td>Address :</td><td> <textarea rows="5" cols="30" name="address" class="addressfield"></textarea></td></tr>
+          <tr><td>Vehicle number:<font color="red">*</font></td><td><input type="text" name="vehicle_number" placeholder="vehicle number"></td></tr>
+          <tr><td>Vehicle make:</td><td><input type="text" name="vehicle_make" placeholder="Vehicle model"></td></tr>
+          <tr><td>License number:<font color="red">*</font></td><td><input type="text" name="license_number" placeholder="license number"></td></tr>
+           <tr><td>Aadhar number:<font color="red">*</font></td><td><input type="text" name="aadhar_number" placeholder="Aadhar number"></td></tr>
+          <tr><td>Insurance details:</td><td><textarea rows="5" cols="30" name="insurance" class="addressfield"></textarea>
+          </td></tr>
+	      <tr><td>Preferred area:</td><td><input type="text" name="preferred_area"  class="field"></td></tr>
+	       <tr><td>EmailL:</td><td><input type="email" name="email" placeholder="email address"></td></tr>
+	       <tr><td>City:<font color="red">*</font></td><td><select name="city" class="field">
+	 <option>Select city.........</option>
+	 <option value="Bangaluru">Banglore</option>
+	 <option value="Hyderabad">Hyderabad</option>
+	 <option value="Visakhapatnam">visakhapatnam</option>
+	 <option value="Mumbai">Mumbai</option>
+	 <option value="Pune">Pune</option>
+     </select></td></tr>
+      <tr><td>Date</td><td><input type="date" name="enrolled_date"  placeholder="today date"class="field"></td></tr>
+      
+	 <tr><td colspan="2" align="center"><input type="checkbox" name="agree"><a href="#" class="link">Accept the Terms And Conditions</a></td></tr>
+	<tr><td></td><td><input type="submit" value="Sign Up" class="button">
+	<input type="reset" value="reset" class="button"></td></tr></tbody></table>
+     </form>		
+      </center>  
+        </div>
+</body>
+</html>
